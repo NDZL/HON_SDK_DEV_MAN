@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeviceActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KeyInput:"
+                android:checked="true"
+                android:onClick="keyInputStatus"/>
+
+            <Switch
+                android:id="@+id/switch3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USB Status:"
+                android:layout_toRightOf="@id/switch1"
+                android:checked="true"
+                android:onClick="USBStatus"/>
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TouchInput:"
+                android:layout_alignParentRight="true"
+                android:checked="true"
+                android:onClick="touchInputStatus"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="25dp"
+                android:background="#808080"
+                android:textColor="#FFFFFF"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etAssetNumber"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp" />
+            <Button
+                android:id="@+id/button"
+                android:layout_width="127dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="150dp"
+                android:onClick="setAssetNumber"
+                android:text="Asset no"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/sensor_spinner"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="200dp"
+                android:entries="@array/sensor" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="127dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="200dp"
+                android:onClick="getHallSensorStatus"
+                android:text="Hall Sensor" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/spinnerActiveTouchProfile"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="260dp"
+                android:entries="@array/touch_profiles" />
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="127dp"
+                android:layout_height="wrap_content"
+                android:onClick="setActiveTouchProfile"
+                android:text="Active TouchProfile"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="260dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="factoryReset"
+                android:text="Factory Wipe"
+                android:layout_marginTop="345dp" />
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="enterpriseReset"
+                android:text="Enterprise Wipe"
+                android:layout_marginTop="345dp"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="46dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="390dp"
+                android:onClick="deviceInfo"
+                android:text="Device Info" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="390dp"
+                android:onClick="clear"
+                android:layout_toRightOf="@id/button6"
+                android:text="Clear" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/button7"
+                android:layout_marginTop="390dp"
+                android:onClick="navigate"
+                android:text=" SET LED" />
+            <Button
+                android:id="@+id/btnGetUSBSt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="390dp"
+                android:layout_toRightOf="@id/button8"
+                android:onClick="getUSBStatus"
+                android:text="Get USB Status" />
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnGetTouchProfiles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="getTouchProfiles"
+                android:layout_marginTop="450dp"
+                android:text="GetTouchProfiles" />
+
+            <Button
+                android:id="@+id/btnGetKeyInputStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/btnGetTouchProfiles"
+                android:onClick="getKeyInputStatus"
+                android:layout_marginTop="450dp"
+                android:text="GetKeyInputStatus" />
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
+</ScrollView>

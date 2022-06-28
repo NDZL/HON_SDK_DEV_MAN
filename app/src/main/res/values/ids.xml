@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="edAssetNumber" type="id" />
+    <item name="sensor_spinner" type="id" />
+    <item name="editPeriod" type="id" />
+
+</resources>

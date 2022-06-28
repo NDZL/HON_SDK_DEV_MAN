@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: C">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/hax-os-sdk-01.04.00.1261.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/libs/hax-os-sdk-01.04.00.1261.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

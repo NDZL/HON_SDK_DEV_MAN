@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sensor">
+        <item>SIM</item>
+        <item>Scanner Trigger</item>
+        <item>Dock Connected</item>
+        <item>All</item>
+    </string-array>
+    <string-array name="touch_profiles">
+        <item>NORMAL</item>
+        <item>FINGER</item>
+        <item>GLOVE</item>
+        <item>STYLUS</item>
+    </string-array>
+    <string-array name="rgb_led_color">
+        <item>OFF</item>
+        <item>RED</item>
+        <item>GREEN</item>
+        <item>BLUE</item>
+    </string-array>
+</resources>
